@@ -48,7 +48,7 @@ Deque<T>& Deque<T>::operator=(Deque&& other) {
     if (this != &other) {
         delete[] m_data_1;
         delete[] m_data_2;
-        copy_(other);
+        move_(std::move(other));
     }
     return  *this;
 }
@@ -68,7 +68,7 @@ void Deque<T>::push_front(const T& value) {
         realloc_2();
     }
     m_data_2[m_size_2++] = value;
-    void();
+    return void;
 }
 
 
