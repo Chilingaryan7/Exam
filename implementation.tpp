@@ -96,7 +96,7 @@ void Deque<T>::pop_front() {
 
 template<typename T>
 void Deque<T>::pop_back() {
-    if (m_size_1) {
+    if (!m_size_1) {
         if (m_size_2) {
             rearrange_1();
         } else {
