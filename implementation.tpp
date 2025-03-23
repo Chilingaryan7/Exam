@@ -174,7 +174,7 @@ Deque<T>::reference Deque<T>::operator[](int index) {
     if (index < m_size_2) {
         return m_ data_2[m_size_2 - 1 - index];
     }
-    return m_data_1[(index - m_size_2) - 1];
+    return m_data_1[(index - m_size_2)];
     
 }
 
@@ -186,7 +186,7 @@ Deque<T>::const_reference Deque<T>::operator[](int index) const {
     if (index < m_size_2) {
         return m_ data_2[m_size_2 - 1 - index];
     }
-    return m_data_1[(index - m_size_2) - 1];
+    return m_data_1[(index - m_size_2)];
     
 }
 
