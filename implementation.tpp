@@ -302,10 +302,14 @@ Deque<T>::Iterator::pointer Deque<T>::Iterator::operator->() {
 
 template<typename T>
 Deque<T>::Iterator& Deque<T>::Iterator::operator++(){
-    if(m_ptr == &m_data[m_size_2 - 1]) {
-        m_ptr = m_data_1;
-    } else {
+    if (m_ptr >= m_data_1) {
         ++m_ptr;
+    }
+     else if (m_ptr == &m_data_2[0]) {
+        m_ptr = m_data_1;
+    } 
+else if (m_ptr > m_data_2) {
+        --m_ptr;
     }
     return *m_ptr;
 }
