@@ -308,7 +308,7 @@ Deque<T>::Iterator& Deque<T>::Iterator::operator++(){
      else if (m_ptr == &m_data_2[0]) {
         m_ptr = m_data_1;
     } 
-else if (m_ptr > m_data_2) {
+    else if (m_ptr > m_data_2) {
         --m_ptr;
     }
     return *m_ptr;
